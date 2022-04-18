@@ -1,0 +1,78 @@
+@import "../theme/colors.scss";
+
+.app{
+  background-color: $mainColor;
+  color: $whiteGrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app-header{
+  h1{
+    text-align: center;
+    padding: 20px;
+    cursor: default;
+  }
+}
+.item-header{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    top: -15px;
+    cursor: default;
+}
+.close-icon{
+  position: absolute;
+  color: rgb(255, 0, 149);
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all .4s;
+}
+.app-item{
+  cursor: pointer;
+}
+.app-item:hover{
+  .close-icon{
+    z-index: 1;
+    opacity: 1;
+    transition: all .4s;
+  }
+}
+.MuiBox-root.css-0{
+  width: fit-content;
+  height: 600px;
+  position: relative;
+  left: calc(50% - 600px/2);
+  top: calc(50% - 600px/2);
+}
+.sort-photos{
+  color: $secondColor;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  svg{
+    position: absolute;
+    right: -35px;
+    top: 16px;
+  }
+}
+.sort-none{
+  svg{
+    display: none;
+  }
+}
+.sort-up{
+  svg{
+    display: block;
+    transform: rotate(0deg);
+  }
+}
+.sort-down{
+  svg{
+    display: block;
+    transform: rotate(180deg);
+  }
+}
